@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+	{% if current_user.is_authenticated %}
+	  	<center><h2 class="ui header" style="color:white;padding:2%">Hi {{ current_user.name }}!</h2></center>
+	{% endif %}
+	<!--h1 class="ui header">{{ title }}</h1-->
+	<div style="color:white; padding:10%; text-align:center;">
+	<h2> For budgets and development of solutions with artificial intelligence, contact us cesarbonmigo8@gmail.com</h2>
+	<div>See you!</div>
+	</div>
+	
+
+{% endblock %}

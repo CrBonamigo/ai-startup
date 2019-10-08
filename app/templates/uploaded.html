@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<body>
+					<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 2px;
+}
+</style>
+</head>
+<body>
+<div>
+<div class="row" >	
+	<center style="color:white">
+	<div class="column">
+		<h1>{{image_name}}</h1>
+		<img width="80%" src="../static/img_up/{{image_name}}">
+	</div>
+	<div class="column">
+		<h1>Emotion and gender result</h1>
+		<img width="80%" src="../static/img_up/{{filename_save}}">
+	</div>
+	</center>
+</div>
+
+<div class="row" style="padding:50px">
+<center>
+<h2 style="color:gold">{{people_counting}} People Detected</h2>
+
+<table style="background-color:dimgray; color:black">
+  <tr>
+    <th>Woman</th>
+    <th>Man</th>
+  </tr>
+  <tr>
+    <td>{{woman}}</td>
+    <td>{{man}}</td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>
+    <title>Index</title>
+</head>
+<body>
+</body>
+</html>
+
+
+{% endblock %}
