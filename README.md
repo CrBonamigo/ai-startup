@@ -3,20 +3,20 @@
 
 ## Images from web app
 <p float="left">
-  <img src="/screenshots/home.JPG" width="45%"/>
-  <img src="/screenshots/service.JPG" width="45%"/>
+  <img src="/screenshots/home.JPG" width="50%"/>
+  <img src="/screenshots/service.JPG" width="42%"/>
 </p>
 
 ## Images portfolio
 <p float="left">
-  <img src="/screenshots/portfolio.JPG" width="45%"/>
-  <img src="/screenshots/pagetest.JPG" width="45%"/>
+  <img src="/screenshots/portfolio.JPG" width="50%"/>
+  <img src="/screenshots/pagetest.JPG" width="42%"/>
 </p>
 
 ## Images prediction web app
-<p float="left">
-  <img src="/screenshots/uploadimage.JPG" width="45%"/>
-  <img src="/screenshots/predict.JPG" width="45%"/>
+<p>
+  <img src="/screenshots/uploadimage.JPG" width="75%"/>
+  <img src="/screenshots/predict.JPG" width="75%"/>
 </p>
 
 ## Instructions on testing the webapp
