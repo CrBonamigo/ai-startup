@@ -3,9 +3,8 @@
 {% block head %}
     {{ super() }}
 {% endblock %}
-
 {% block content %}
-
+	<div style="text-align:center;margin-top:10%">
     <h1 class="ui header">Hi {{ current_user.full_name }}!</h1>
-
+	</div>
 {% endblock %}

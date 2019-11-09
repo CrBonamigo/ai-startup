@@ -1,5 +1,5 @@
 from flask import render_template, jsonify, Flask, redirect, url_for, request
-from flask.ext.uploads import UploadSet, configure_uploads, IMAGES
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 from app import app
 import random
 import os
@@ -22,13 +22,20 @@ def index():
 
 
 @app.route('/uploaded', methods = ['GET', 'POST'])
-def upload_file():
+def uploaded():
+	print(request.form['source'])
+	if 'app' in request.form['source']:
+		print("Request APP")
 	if request.method == 'POST' and 'photo' in request.files:
 		filename = photos.save(request.files['photo'])
 		image_location = os.path.join(image_storage_path, filename)
 		woman, man, filename_save = runDetector(image_location, filename)
 		people_counting = man+ woman
 		#return filename
+		if 'app' in request.form['source']:
+			data = dict()
+			data['predictions'] = {'man': man, 'woman': woman}
+			return jsonify(data)
 	return render_template('uploaded.html', image_name=filename, image_location=image_location, people_counting=people_counting, man=man, woman=woman, filename_save=filename_save)
 
 	

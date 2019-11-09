@@ -1,3 +1,30 @@
+
+#Startup AI to Gender and Emotion classifier
+
+## Images from web app
+<p float="left">
+  <img src="/screenshots/home.JPG" width="45%"/>
+  <img src="/screenshots/service.JPG" width="45%"/>
+</p>
+
+## Images portfolio
+<p float="left">
+  <img src="/screenshots/portfolio.JPG" width="45%"/>
+  <img src="/screenshots/pagetest.JPG" width="45%"/>
+</p>
+
+## Images prediction web app
+<p float="left">
+  <img src="/screenshots/uploadimage.JPG" width="45%"/>
+  <img src="/screenshots/predict.JPG" width="45%"/>
+</p>
+
+## Instructions on testing the webapp
+
+1. Go to https://startup-bonaeng.herokuapp.com/
+2. Create account and login.
+4. You're ready to upload your image and let it detect the lung disease for you.
+
 ## Introduction
 
 The goal of this project is to create various machine learning based applications for various industrial sectors. With available MVP's interested can test the application and buy if they like or want to implement in any solution. The first algorithm classifies genres and emotions by image.

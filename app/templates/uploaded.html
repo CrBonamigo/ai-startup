@@ -32,12 +32,17 @@ tr:nth-child(even) {
   width: 50%;
   padding: 2px;
 }
+
+.tabela {
+	width: 100%;
+}
 </style>
 </head>
 <body>
 <div>
-<div class="row" >	
-	<center style="color:white">
+
+<div class="row" style="text-align:center" >	
+	
 	<div class="column">
 		<h1>{{image_name}}</h1>
 		<img width="80%" src="../static/img_up/{{image_name}}">
@@ -46,24 +51,25 @@ tr:nth-child(even) {
 		<h1>Emotion and gender result</h1>
 		<img width="80%" src="../static/img_up/{{filename_save}}">
 	</div>
-	</center>
+	
 </div>
-
+<center >
 <div class="row" style="padding:50px">
-<center>
-<h2 style="color:gold">{{people_counting}} People Detected</h2>
+	<h2 style="color:gold;margin:auto">{{people_counting}} People Detected</h2>
 
-<table style="background-color:dimgray; color:black">
-  <tr>
-    <th>Woman</th>
-    <th>Man</th>
-  </tr>
-  <tr>
-    <td>{{woman}}</td>
-    <td>{{man}}</td>
-  </tr>
-</table>
+	<table style="background-color:dimgray; color:black">
+	  <tr>
+		<th>Woman</th>
+		<th>Man</th>
+	  </tr>
+	  <tr>
+		<td>{{woman}}</td>
+		<td>{{man}}</td>
+	  </tr>
+	</table>
+	
 </div>
+</center>
 </div>
 </body>
 </html>

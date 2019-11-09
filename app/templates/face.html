@@ -1,38 +1,37 @@
-{% extends "layout.html" %}
+{% extends "index.html" %}
 {% block content %}
 <style>
-.column {
-  float: left;
-  width: 50%;
-  padding: 1px;
+
+.esconder {
+visibility: hidden;
 }
 </style>
 
- <center> <h2><font color='white'>Upload your image for model detect faces and classifier gender and emotion.</font></h2>
- <div class="row">
- <div class="column">
- <img width="60%" src="../static/img/test_image.jpg">
- </div>
- <div class="column">
- <img width="60%" src="../static/img/predicted_test_image.png">
- </div>
-  </div>
+<div class="text-center fa"style="padding:5%;position:absolute;margin-top:10%"> 
+<h3>Upload your image for model detect faces and classifier gender and emotion.</h3>
+<div class="fa row" style="padding:5%" >
+	<div class="col-md-6" style="float:left">
+		<img width="75%" src="../static/img/test_image.jpg">
+	</div>
+	<div class="col-md-6" style="float:left">
+		<img width="75%" src="../static/img/predicted_test_image.png">
+	</div>
+</div>
  {% if current_user.is_authenticated %}
-  <h2><font color='white'>Upload your image below</font></h2>
 
   <form action = "http://localhost:5000/uploaded" method = "POST"
          enctype = "multipart/form-data">
-         <input type = "file" name = "photo" style="background-color:#3b83c0;"/>
-         <input type = "submit"/>
-      </form>
+	 <input type = "file" name = "photo" style="background-color:#3b83c0;"/>
+	 <input type = "submit"/>
+	 <input hidden name="source" value="web"/>
+  </form>
 	  
-	  <div style="padding:2%; color:white" id="paypal-button"><h2>Want to buy the model? Click the button below and we will send it to you!</h2></div>
-	  {% else %}
-	  
-	  <h2><font color='white'>Sigin for upload</font></h2>
-	  </center>
+	  <div  class="fa"style="padding:5%;" id="paypal-button"><h3>Want to buy the model? Click the button below and we will send it to you!</h3>
+	  {% else %}	  
+		<h4 class="fa" style="margin-top:3%">Sign in for upload</h4>
 	  {% endif %}
-
+	  </div>
+</div>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 
 <script>
@@ -46,7 +45,7 @@
 		 fundingicons: 'true',
 		},
 
-        env: 'sandbox', // 'production' Or 'sandbox'
+        env: 'sandbox', // Or 'sandbox' or 'production'
 
         commit: true, // Show a 'Pay Now' button
 

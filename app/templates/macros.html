@@ -1,7 +1,7 @@
 {# myapp/templates/macros.html #}
 
 <!-- Highlight the current tab -->
-{% macro nav_link(endpoint, text) %}
+<!--{% macro nav_link(endpoint, text) %}
 	{% if request.endpoint is not none %}
 		{% if request.endpoint.endswith(endpoint) %}
 		    <a class="active teal item" href="{{ url_for(endpoint) }}">{{ text }}</a>
@@ -11,7 +11,7 @@
 	{% else %}
     	<a class="item" href="{{ url_for(endpoint) }}">{{ text }}</a>
 	{% endif %}
-{% endmacro %}
+{% endmacro %}-->
 
 <!-- Render a WTForm form's field (with it's possible associated errors) from a WTForms form -->
 {% macro render_field(field) %}
